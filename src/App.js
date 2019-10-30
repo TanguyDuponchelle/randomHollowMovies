@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar';
 import axios from 'axios'
 import VideoDetail from './components/VideoDetail'
 import VideoList from './components/VideoList'
+import MosaiqueMovies from './components/MosaiqueMovies';
 
 class App extends Component {
     constructor(props){
@@ -44,6 +45,9 @@ class App extends Component {
                         <div>
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                         </div>
+                        <div>
+                            <MosaiqueMovies />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,4 +55,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default App
