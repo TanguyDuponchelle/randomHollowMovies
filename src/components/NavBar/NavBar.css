@@ -1,0 +1,82 @@
+.NavBar {
+  background-color: #000;
+}
+.NavBar__list {
+  padding-left: 0;
+  margin-top: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.NavBar__logo img {
+  width: 10vmin;
+  margin-top: 10%;
+}
+
+.NavBar__site_name {
+  color: red;
+  font-family: "Eater", cursive;
+  font-size: 3vmin;
+  margin-top: -11px;
+}
+.NavBar__search_items {
+  display: flex;
+  justify-content: center;
+}
+.NavBar__search {
+  width: 70%;
+  background-color: #000;
+  border-left: #000;
+  border-right: #000;
+  border-top: #000;
+  border-bottom-color: red;
+
+  color: white;
+  margin-bottom: 3%;
+}
+.NavBar__search:focus {
+  /* removes yellow line on focus*/
+  outline: 0;
+}
+.Navbar__searchButton {
+  background-color: #000;
+  border: #000;
+  color: red;
+}
+
+.Navbar__searchButton:focus {
+  /* removes yellow line on focus*/
+  outline: 0;
+}
+
+@media (min-width: 700px) {
+  .NavBar__search {
+    font-size: 3vh;
+  }
+  .Navbar__searchButton {
+    font-size: 3vh;
+  }
+}
+@media (min-width: 1100px) {
+  .NavBar__list {
+    flex-direction: row;
+
+    justify-content: space-evenly;
+  }
+  .NavBar__logo {
+    display: flex;
+    align-items: flex-end;
+    margin: 1%;
+  }
+  .NavBar__logo img {
+    margin-top: 0;
+  }
+  .NavBar__site_name {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-left: -6%;
+  }
+}
