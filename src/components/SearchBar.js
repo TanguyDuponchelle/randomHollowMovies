@@ -4,7 +4,7 @@ class SearchBar extends Component {
     constructor(props){
         super(props)
         this.state ={
-            value = 'No entry for the moment'
+            value : 'No entry for the moment'
         }
     }
     handleChange = (event) => {
@@ -13,6 +13,7 @@ class SearchBar extends Component {
         })
     }
     handleSubmit = (event) => {
+        event.preventDefault()
         this.props.handleFormSubmit(this.state.value)
     }
     render(){
@@ -25,7 +26,6 @@ class SearchBar extends Component {
                         </label>
                         <input onChange={this.handleChange} name ="searchVideo" id="searchVideo" type="text" value={this.state.value}/>
                     </div>
-
                 </form>
             </div>
         )
