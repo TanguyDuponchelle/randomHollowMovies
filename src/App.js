@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; 
 import SearchBar from './components/SearchBar/SearchBar';
 import axios from 'axios'
-import VideoDetail from './components/VideoDetail'
+import VideoDetail from './components/VideoDetail/VideoDetail'
 import VideoList from './components/VideoList'
 import MosaiqueMovies from './components/MosaiqueMovies';
 

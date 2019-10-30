@@ -1,0 +1,6 @@
+.VideoDetail__noVideo{
+    content:url(pumpkin.jpg);
+    max-width: 80%;
+
+    padding-left: 10%;
+}

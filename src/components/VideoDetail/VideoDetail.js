@@ -1,9 +1,11 @@
 
 import React from 'react';
+import './VideoDetail.css';
 
 const VideoDetail = ({video}) => {
     if (!video) {
-        return <div>Citrouille</div>;
+        return <div className="VideoDetail__noVideo">
+            Citrouille</div>;
     }
 
     const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
