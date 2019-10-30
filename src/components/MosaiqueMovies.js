@@ -23,7 +23,7 @@ class MosaiqueMovies extends Component {
     return (
       <div className='containerMosaique'>
           <MoviesCard movies = {movies} />
-        <p>{movies.length > 0 && movies[0].title}</p>
+        
       </div>
     );
   }
