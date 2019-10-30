@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import axios from 'axios'
 import VideoDetail from './components/VideoDetail/VideoDetail'
-import VideoList from './components/VideoList'
+import VideoList from './components/VideoList/VideoList'
 import MosaiqueMovies from './components/MosaiqueMovies';
+import './App.css';
 
 class App extends Component {
     constructor(props){
@@ -49,11 +50,11 @@ class App extends Component {
 
       const {movies} = this.state
         return (
-          <div>
+          <div className="App">
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
                 <div>
                     <div>
-                        <div>
+                        <div className="App__VideoDetail">
                             <VideoDetail video={this.state.selectedVideo}/>
                         </div>
                         <div>

@@ -1,0 +1,8 @@
+.VideoList{
+    background-color: #000;
+    padding-bottom: 2%;
+    margin-bottom: 0;
+}
+.VideoList__singleVideo{
+    color:white;
+}
