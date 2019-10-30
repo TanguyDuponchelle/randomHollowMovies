@@ -20,7 +20,7 @@
   color: red;
   font-family: "Eater", cursive;
   font-size: 3vmin;
-  margin-top: -11px;
+  margin-top: -6px;
 }
 .NavBar__search_items {
   display: flex;
@@ -77,6 +77,6 @@
   .NavBar__site_name {
     margin-block-start: 0;
     margin-block-end: 0;
-    margin-left: -6%;
+    margin-left: 0;
   }
 }
