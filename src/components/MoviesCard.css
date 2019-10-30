@@ -1,18 +1,11 @@
-.cardContainer {
-    background-color: lightgray;
-    padding: 10px;
-    margin: 20px 0;
-    width: 100%;
+.cardBigContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-.cardContainer:first-child{
-    margin-top: 0;
+    
 }
 
 .cardImg {
-    width: 80%;
+    width: 100%;
 }
 
 .cardTitle {
@@ -21,8 +14,28 @@
     
 }
 
-@media (max-width: 1250px) {
-    .cardImg {
+@media (min-width: 500px) {
+    .cardBigContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cardContainer {
         width: 50%;
+        padding: 0;
+    }
+}
+
+@media (min-width: 800px) {
+    .cardBigContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .cardContainer {
+        width: 20%;
+        padding: 0 
     }
 }

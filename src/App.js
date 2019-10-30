@@ -10,8 +10,20 @@ class App extends Component {
         super(props)
         this.state = {
         videos: [],
-        selectedVideo: null
+        selectedVideo: null,
+        movies: []
         }
+    }
+
+    async getMovies() {
+      const res = await axios.get(
+        "https://hackathon-wild-hackoween.herokuapp.com/movies"
+      );
+      this.setState({ movies: res.data.movies });
+    }
+
+    componentDidMount() {
+      this.getMovies();
     }
 
     handleSubmit = async (valueFromSearchBar) => {
@@ -34,6 +46,8 @@ class App extends Component {
     }
 
     render() {
+
+      const {movies} = this.state
         return (
           <div>
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
@@ -46,7 +60,7 @@ class App extends Component {
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                         </div>
                         <div>
-                            <MosaiqueMovies />
+                            <MosaiqueMovies getMovies={this.getMovies} movies={movies} />
                         </div>
                     </div>
                 </div>
