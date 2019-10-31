@@ -59,7 +59,6 @@ class App extends Component {
      }
 
     render() {
-
       const {movies, value} = this.state
         return (
           <div className="App">
