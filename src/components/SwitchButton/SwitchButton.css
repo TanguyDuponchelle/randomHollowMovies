@@ -62,3 +62,9 @@
 .switch:checked + .switch_label::before {
   border: 0  rgba(90, 223, 13, 0);
 }
+
+@media (min-width:700px){
+  .switch_label {
+    padding: 5% 90% 5% 40%;
+  }
+}

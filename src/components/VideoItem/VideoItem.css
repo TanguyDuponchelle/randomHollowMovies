@@ -21,3 +21,8 @@ iframe{
     border-radius: 5%;
     box-shadow: 2px 5px 15px red;
 }
+@media screen and (min-width : 1100 px){
+    .VideoItem__ui_image{
+        height: 250px;
+}
+}
