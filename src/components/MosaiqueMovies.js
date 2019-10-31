@@ -2,12 +2,12 @@ import React from "react";
 import MoviesCard from "./MoviesCard";
 
 
-const MosaiqueMovies = ({ movies }) => {
+const MosaiqueMovies = ({ movies, value, handleOnClick }) => {
 
       
     return (
       <div className='containerMosaique'>
-          <MoviesCard movies={movies} />
+          <MoviesCard movies={movies} value={value} handleOnClick={handleOnClick}/>
      </div>
     );
   }

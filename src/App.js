@@ -10,9 +10,10 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-        videos: [],
-        selectedVideo: null,
-        movies: []
+            videos: [],
+            selectedVideo: null,
+            movies: [],
+            value : ''
         }
     }
 
@@ -46,9 +47,14 @@ class App extends Component {
         this.setState({selectedVideo: video})
     }
 
+    handleOnClick = (e) => {
+        this.setState({value: e.currentTarget.alt})
+        console.log(this.state.value)
+        
+     }
     render() {
 
-      const {movies} = this.state
+      const {movies, value} = this.state
         return (
           <div className="App">
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
@@ -61,7 +67,7 @@ class App extends Component {
                             <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
                         </div>
                         <div>
-                            <MosaiqueMovies getMovies={this.getMovies} movies={movies} />
+                            <MosaiqueMovies movies={movies} value={value} handleOnClick={this.handleOnClick}/>
                         </div>
                     </div>
                 </div>
