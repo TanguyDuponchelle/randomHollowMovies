@@ -9,6 +9,10 @@
     width: 100%;
 }
 
+.cardImg:hover {
+     transform: scale(1.2);
+}
+
 .cardTitle {
     font-size: 1.3rem;
     font-weight: 700;
