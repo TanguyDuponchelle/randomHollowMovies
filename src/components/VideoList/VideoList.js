@@ -5,9 +5,9 @@ import './Videolist.css'
 const VideoList = ({ videos, handleVideoSelect }) => {
   const renderedVideos = videos.map(video => {
     return (
-      <div className="VideoList__video">
+      <div key={video.id.videoId} className="VideoList__video">
         <VideoItem
-          key={video.id.videoId}
+          
           video={video}
           handleVideoSelect={handleVideoSelect}
         />
