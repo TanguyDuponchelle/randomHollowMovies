@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import logo from "./death.png";
 import "./Searchbar.css";
+import SwitchBotton from "../SwitchButton/SwitchButton";
+
 
 class SearchBar extends Component {
   constructor(props) {
@@ -30,7 +32,10 @@ class SearchBar extends Component {
             <li>
               {/*SwitchBottom*/}
               <SwitchBotton />
+<<<<<<< HEAD
 
+=======
+>>>>>>> ffc5d1e7f14016125efb668501185e5f4825cfd2
             </li>
             <li className="NavBar__search_items">
               <form onSubmit={this.handleSubmit}>
