@@ -1,9 +1,11 @@
 import React from "react";
-import './SwitchButton.css'
+import "./SwitchButton.css";
+import woman from "./scaredWoman.mp3";
 
 class SwitchBottom extends React.Component {
   constructor(props) {
     super(props);
+    this.audio = new Audio(woman);
 
     this.state = {
       isChecked: false
@@ -22,14 +24,18 @@ class SwitchBottom extends React.Component {
             type="checkbox"
             id="toogle1"
           />
-          <label htmlFor="toogle1" className="switch_label">{`${this.state.isChecked?"on":"off"}`}</label>
+          <label htmlFor="toogle1" className="switch_label">
+            {`${this.state.isChecked ? "on" : "off"}`}
+            </label>
+           
+         
         </div>
       </div>
     );
   }
-
   _handleChange = () => {
     this.setState({ isChecked: !this.state.isChecked });
+    !this.state.isChecked?this.audio.play():this.audio.pause();
   };
 }
 
