@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import logo from "./death.png";
 import "./Searchbar.css";
-import SwitchBotton from "../SwitchBotton/SwitchBotton";
 
 class SearchBar extends Component {
   constructor(props) {
@@ -28,11 +27,6 @@ class SearchBar extends Component {
               <img src={logo} alt="logo" />
               <h1 className="NavBar__site_name">Horror teaser</h1>
             </li>
-            <li>
-              {/*SwitchBottom*/}
-              <SwitchBotton />
-
-            </li>
             <li className="NavBar__search_items">
               <form onSubmit={this.handleSubmit}>
                 <input
@@ -42,7 +36,6 @@ class SearchBar extends Component {
                   name="searchVideo"
                   id="searchVideo"
                   type="text"
-                  
                   defaultValue={this.props.value}
                 />
                 <input
@@ -52,11 +45,8 @@ class SearchBar extends Component {
                   onSubmit={this.handleSubmit}
                 />
               </form>
-              
             </li>
-         
-            
-          </ul>
+</ul>
         </nav>
       </div>
     );
