@@ -5,21 +5,17 @@ import SwitchButton from "../SwitchButton/SwitchButton";
 
 
 class SearchBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      inputText: ""
-    };
-  }
   handleChange = event => {
-    this.setState({
-      inputText: event.target.value
-    });
+    event.preventDefault();
+    this.props.handleChange(event.target.value);
   };
+  
   handleSubmit = event => {
     event.preventDefault();
-    this.props.handleFormSubmit(this.state.inputText);
+    console.log(event.target.elements[0])
+    this.props.handleFormSubmit(event.target.elements[0].value);
   };
+
   render() {
     return (
       <div>
@@ -51,7 +47,7 @@ class SearchBar extends Component {
                 />
               </form>
             </li>
-</ul>
+            </ul>
         </nav>
       </div>
     );

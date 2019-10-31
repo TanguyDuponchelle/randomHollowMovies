@@ -33,7 +33,7 @@ class App extends Component {
             params: {
                  q: valueFromSearchBar,
                  part: 'snippet',
-                 key : 'AIzaSyAFUNYmE1gfydRFrlb3Q05gXlPSgQmiY6I',
+                 key : 'AIzaSyAI8fLXFV5Q4IfMxDx7_ZNh3sixgXZI5sA',
                  maxResults: 3
 
             }
@@ -53,11 +53,9 @@ class App extends Component {
         });
     }
     handleOnClick = (e) => {
-        this.setState({value: `${e.currentTarget.alt.replace("_"," ")} bande annonce`})
-        this.handleSubmit()
-        this.handleChange()
-        console.log(this.state.value)
-        
+        const value = `${e.currentTarget.alt.replace("_"," ")} bande annonce`;
+        this.setState({ value });
+        this.handleSubmit(value);
      }
 
     render() {
@@ -65,7 +63,7 @@ class App extends Component {
       const {movies, value} = this.state
         return (
           <div className="App">
-                <SearchBar handleFormSubmit={this.handleSubmit} value={value} />
+                <SearchBar handleFormSubmit={this.handleSubmit} handleChange={value => this.setState({ value })} value={value} />
                 <div>
                     <div>
                         <div className="App__VideoDetail">
