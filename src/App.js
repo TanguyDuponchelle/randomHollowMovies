@@ -47,17 +47,25 @@ class App extends Component {
         this.setState({selectedVideo: video})
     }
 
+    handleChange = event => {
+        this.setState({
+          inputText: this.state.value
+        });
+    }
     handleOnClick = (e) => {
-        this.setState({value: e.currentTarget.alt})
+        this.setState({value: `${e.currentTarget.alt.replace("_"," ")} bande annonce`})
+        this.handleSubmit()
+        this.handleChange()
         console.log(this.state.value)
         
      }
+
     render() {
 
       const {movies, value} = this.state
         return (
           <div className="App">
-                <SearchBar handleFormSubmit={this.handleSubmit} value={value}/>
+                <SearchBar handleFormSubmit={this.handleSubmit} value={value} />
                 <div>
                     <div>
                         <div className="App__VideoDetail">
