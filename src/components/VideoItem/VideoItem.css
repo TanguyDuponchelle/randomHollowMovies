@@ -14,6 +14,9 @@
 
 }
 
+iframe{
+    width: 100%;
+}
 .VideoItem__ui_image{
     border-radius: 5%;
     box-shadow: 2px 5px 15px red;

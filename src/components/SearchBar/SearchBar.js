@@ -1,23 +1,22 @@
 import React, { Component } from "react";
 import logo from "./death.png";
 import "./Searchbar.css";
-import SwitchBotton from "../SwitchBotton/SwitchBotton";
 
 class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      inputText: ""
     };
   }
   handleChange = event => {
     this.setState({
-      value: event.target.value
+      inputText: event.target.value
     });
   };
   handleSubmit = event => {
     event.preventDefault();
-    this.props.handleFormSubmit(this.state.value);
+    this.props.handleFormSubmit(this.state.inputText);
   };
   render() {
     return (
@@ -28,11 +27,6 @@ class SearchBar extends Component {
               <img src={logo} alt="logo" />
               <h1 className="NavBar__site_name">Horror teaser</h1>
             </li>
-            <li>
-              {/*SwitchBottom*/}
-              <SwitchBotton />
-
-            </li>
             <li className="NavBar__search_items">
               <form onSubmit={this.handleSubmit}>
                 <input
@@ -42,7 +36,7 @@ class SearchBar extends Component {
                   name="searchVideo"
                   id="searchVideo"
                   type="text"
-                  value={this.state.value}
+                  defaultValue={this.props.value}
                 />
                 <input
                   className="Navbar__searchButton"
@@ -51,11 +45,8 @@ class SearchBar extends Component {
                   onSubmit={this.handleSubmit}
                 />
               </form>
-              
             </li>
-         
-            
-          </ul>
+</ul>
         </nav>
       </div>
     );

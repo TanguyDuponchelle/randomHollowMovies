@@ -57,7 +57,7 @@ class App extends Component {
       const {movies, value} = this.state
         return (
           <div className="App">
-                <SearchBar handleFormSubmit={this.handleSubmit}/>
+                <SearchBar handleFormSubmit={this.handleSubmit} value={value}/>
                 <div>
                     <div>
                         <div className="App__VideoDetail">
