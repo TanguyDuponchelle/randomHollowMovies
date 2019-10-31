@@ -65,7 +65,7 @@ class App extends Component {
                 <SearchBar handleFormSubmit={this.handleSubmit} handleChange={value => this.setState({ value })} value={value} />
                 <div>
                     <div>
-                        <div className="App__VideoDetail">
+                        <div id="topApp" className="App__VideoDetail">
                             <VideoDetail video={this.state.selectedVideo}/>
                         </div>
                         <div>

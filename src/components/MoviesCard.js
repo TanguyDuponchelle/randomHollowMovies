@@ -6,7 +6,7 @@ const MoviesCard = ({movies, value, handleOnClick}) => {
       <div className="cardBigContainer">
         {movies.map(movie => (
           <div className="cardContainer" key={movie.id}>
-            <img onClick={handleOnClick}  className="cardImg" src={movie.posterUrl} alt={movie.title} />
+            <a href="#topApp"><img onClick={handleOnClick}  className="cardImg" src={movie.posterUrl} alt={movie.title} /></a>
           </div>
         ))}
       </div>
