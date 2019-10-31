@@ -1,5 +1,5 @@
 import React from "react";
-import './SwitchBottom.css'
+import './SwitchButton.css'
 
 class SwitchBottom extends React.Component {
   constructor(props) {
