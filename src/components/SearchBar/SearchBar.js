@@ -6,17 +6,17 @@ class SearchBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      inputText: ""
     };
   }
   handleChange = event => {
     this.setState({
-      value: event.target.value
+      inputText: event.target.value
     });
   };
   handleSubmit = event => {
     event.preventDefault();
-    this.props.handleFormSubmit(this.state.value);
+    this.props.handleFormSubmit(this.state.inputText);
   };
   render() {
     return (
@@ -36,7 +36,8 @@ class SearchBar extends Component {
                   name="searchVideo"
                   id="searchVideo"
                   type="text"
-                  value={this.state.value}
+                  
+                  defaultValue={this.props.value}
                 />
                 <input
                   className="Navbar__searchButton"
