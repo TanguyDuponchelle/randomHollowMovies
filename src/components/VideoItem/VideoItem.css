@@ -1,10 +1,20 @@
-.video-item {
-    display: flex !important;
-    align-items: center !important;
+.videoItem {
+    padding-top: 3%;
+    display: flex ;
     cursor: pointer;
+    flex-direction: column;
+    align-items: center;
 }
 
-.video-item.item img {
-    max-width: 200px;
-    max-height: 250px ;
+
+.video-item__header{
+    color:red;
+    margin-bottom: 5%;
+    font-family: 'Jolly Lodger', cursive;
+
+}
+
+.VideoItem__ui_image{
+    border-radius: 5%;
+    box-shadow: 2px 5px 15px red;
 }
